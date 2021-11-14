@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>DOM Manipulation</Title>
+        <style>
+            body{
+                padding: 0;
+                margin: 0;
+                background-color: #ddd;
+            }
+            .container{
+                width: 60%;
+                height: auto;
+                margin: auto;
+                margin-top: 100px;
+                box-shadow: 0 0 10px #0f0f0f;
+                text-align: center;
+                padding: 10px 10px;
+                padding-bottom: 50px;
+                background-color: #f0f0f0;
+            }
+            .taskDesc{
+                text-align: left;
+                font-size: 24px;
+            }
+            .title{
+                font-size: 24px;
+                color: rgb(129, 38, 4);
+                margin-bottom: 30px;
+            }
+            .InputBox{
+                width: 90%;
+            }
+            .InputBox input{
+                width: 60%;
+                height: 40px;
+                border-radius: 8px;
+                padding: 0px 10px;
+                margin: 0 10px;
+                outline: none;
+                border: 2px solid #0f0f0f;
+            }
+            .InputBox button{
+                width: auto;
+                height: 40px;
+                padding: 0px 5px;
+                border-radius: 8px;
+                margin: 0 10px;
+                border: 2px solid #0f0f0f;
+                font-size: 16px;
+                font-weight: 700;
+                background-color: aqua;
+            }
+            .InputBox button:hover{
+                transform: scale(1.1);
+            }
+            .btnRow{
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 10px;
+                justify-content: center;
+            }
+            .btnRow [type="button"]{
+                width: 150px;
+                height: 40px;
+                padding: 0px 5px;
+                border-radius: 8px;
+                margin: 0 10px;
+                border: 2px solid #0f0f0f;
+                font-size: 16px;
+                font-weight: 700;
+                background-color: aqua;
+            }
+            .btnRow [type="button"]:nth-child(1){
+                background-color: rgb(221, 207, 8);
+            }
+            .btnRow [type="button"]:nth-child(2){
+                background-color: rgb(207, 204, 152);
+            }
+            .btnRow [type="button"]:nth-child(3){
+                background-color: rgb(238, 62, 9);
+            }
+            .btnRow [type="button"]:hover{
+                transform: scale(1.05);
+            }
+        </style>
+    </head>
+    <body id="body">
+        <div class="container">
+            <div class="taskDesc">Task - 1</div>
+            <div class="title">Show/Hide Password</div>
+            <div class="InputBox">
+                <form>
+                    <input id="passwordField" placeholder="Enter your password" type="password" required autofocus>
+                    <button id="showHideBtn" type="submit">Show Password</button>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div class="taskDesc">Task - 2</div>
+            <div class="title">
+                <span id="dynamicContent">Hello</span> Jon,
+            </div>
+            <div class="btnRow">
+                <button id="gmBtn" type="button">Good Morning</button>
+                <button id="gaBtn" type="button" onclick="userMsg('Good Afternoon', '#d44', 'afternoon.jpeg')">Good Afternoon</button>
+                <button id="geBtn" type="button" onclick="userMsg('Good Evenning', '#d3f', 'evening.jpeg')">Good Evenning</button>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
